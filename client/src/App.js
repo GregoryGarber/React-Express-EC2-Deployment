@@ -9,13 +9,19 @@ function App() {
   useEffect(() => {
     const fetch = async () => {
       await axios.get('http://localhost:5000/test')
-      .then(res => {setData(res.data.data)})
+      .then(res => {
+        console.log(res)
+        setData(res.data.data)
+      })
+
+
     }
     fetch()
   }, [])
 
   return (
-    <div>
+    <div className='poo'>
+      <h1>hi</h1>
       {data}
     </div>
   );
