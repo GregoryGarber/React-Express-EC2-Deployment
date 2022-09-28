@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const fetch = async () => {
-      await axios.get('http://localhost:5000/test')
+      await axios.get(`${process.env.REACT_APP_ROUTE}:5000/test`)
       .then(res => {
         console.log(res)
         setData(res.data.data)
@@ -18,6 +18,8 @@ function App() {
     }
     fetch()
   }, [])
+
+  console.log(process.env.REACT_APP_ROUTE);
 
   return (
     <div className='poo'>
