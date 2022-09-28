@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const fetch = async () => {
-      await axios.get('https://www.greggarber.net/test')
+      await axios.get('/test')
       .then(res => {
         console.log(res)
         setData(res.data.data)
