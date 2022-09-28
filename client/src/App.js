@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const fetch = async () => {
-      await axios.get(`${process.env.REACT_APP_ROUTE}:5000/test`)
+      await axios.get('https://www.greggarber.net/test')
       .then(res => {
         console.log(res)
         setData(res.data.data)
